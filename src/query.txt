@@ -1,0 +1,29 @@
+/* Index */
+select * from wmind2.expt_creat_hist where user_id='wspace001' and created::date = '2021-09-28'
+select * from wmind2.bio_data_creat_hist where user_id='wspace001' and start_time::date = '2021-09-28'
+
+/* user */
+select distinct user_id from wmind2.expt_creat_hist where created::date = '2021-09-28'
+
+select (select user_nm from wmind2.user_info where user_id='wspace001') as user_name, data_sn, data_type, start_time from wmind2.bio_data_creat_hist 
+where user_id='wspace001' and start_time::date = '2021-09-28'
+
+/*E4 Device*/
+select * from wmind2.e4_temp_data where user_id='wspace001' and created::date = '2021-09-28'
+select * from wmind2.e4_ibi_data where user_id='wspace001' and created::date = '2021-09-28'
+select * from wmind2.e4_acc_data where user_id='wspace001' and created::date = '2021-09-28'
+select * from wmind2.e4_gsr_data where user_id='wspace001' and created::date = '2021-09-28'
+select * from wmind2.e4_bvp_data where user_id='wspace001' and created::date = '2021-09-28'
+
+/* Galaxy Watch 3 */
+select * from wmind2.galaxy_hr_data where user_id='wspace001' and created::date = '2021-09-28'
+select * from wmind2.galaxy_rri_data where user_id='wspace001' and created::date = '2021-09-28'
+select * from wmind2.galaxy_pedometer_data where user_id='wspace001' and created::date = '2021-09-28'
+
+/* Environmental Device */
+select * from wmind2.env_expt_data where user_id='wspace001' and created::date = '2021-09-28'
+
+
+
+
+
